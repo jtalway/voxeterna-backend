@@ -36,7 +36,7 @@ exports.preSignup = (req, res) => {
 			<p>${process.env.CLIENT_URL}/auth/account/activate/${token}</p>
 			<hr />
 			<p>This email may contain sensitive information.</p>
-			<p>https://websitegoeshere.com</p>
+			<p>https://voxeterna.com</p>
 		`		
 		};
 
@@ -220,7 +220,7 @@ exports.forgotPassword = (req, res) => {
 			<p>${process.env.CLIENT_URL}/auth/password/reset/${token}</p>
 			<hr />
 			<p>This email may contain sensitive information.</p>
-			<p>https://websitegoeshere.com</p>
+			<p>https://voxeterna.com</p>
 		`		
 		};
 		// populating the db > user > resetPasswordLink

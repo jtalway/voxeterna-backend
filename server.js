@@ -16,6 +16,13 @@ const formRoutes = require("./routes/form");
 // app
 const app = express();
 
+const sitemapOptions = {
+    root: 'https://voxeterna/sitemap/',
+    headers: {
+        'Content-Type': 'text/xml;charset=UTF-8'
+    }
+};
+
 // db
 mongoose
 	.connect(process.env.DATABASE_LOCAL, {
@@ -46,6 +53,9 @@ app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", tagRoutes);
 app.use("/api", formRoutes);
+
+// serve sitemap
+app.get('/sitemap.xml', (req, res) => res.status(200).sendFile('sitemap.xml', sitemapOptions));
 
 
 

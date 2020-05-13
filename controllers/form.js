@@ -18,7 +18,7 @@ exports.contactForm = (req, res) => {
 			<p>Sender Message: ${message}</p>
 			<hr />
 			<p>This email may contain sensitive information.</p>
-			<p>https://websitegoeshere.com</p>
+			<p>https://voxeterna.com</p>
 		`		
 	};
 	sgMail.send(emailData).then(sent => {
@@ -45,7 +45,7 @@ exports.contactBlogAuthorForm = (req, res) => {
 			<p>Message: ${message}</p>
 			<hr />
 			<p>This email may contain sensitive information.</p>
-			<p>https://websitegoeshere.com</p>
+			<p>https://voxeterna.com</p>
 		`		
 	};
 	console.log(emailData);

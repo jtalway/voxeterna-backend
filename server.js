@@ -17,7 +17,7 @@ const formRoutes = require("./routes/form");
 const app = express();
 
 const sitemapOptions = {
-    root: 'https://voxeterna/sitemap/',
+    root: __dirname,
     headers: {
         'Content-Type': 'text/xml;charset=UTF-8'
     }

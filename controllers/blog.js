@@ -297,7 +297,7 @@ exports.photo = (req, res) => {
 
 // LIST RELATED
 exports.listRelated = (req, res) => {
-	let limit = req.body.limit ? parseInt(req.body.limit) : 3;
+	let limit = req.body.limit ? parseInt(req.body.limit) : 6;
 	// from blog, grab its id and list of categories
 	const {_id, categories} = req.body.blog;
 

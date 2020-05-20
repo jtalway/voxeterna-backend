@@ -43,7 +43,7 @@ app.use(morgan("dev"));
 // added 2 bodyparser lines to fix PayloadTooLargeError
 app.use(bodyParser.urlencoded({
   limit: "50mb",
-  extended: false
+  extended: true
 }));
 app.use(bodyParser.json({limit: "50mb"}));
 // app.use(bodyParser.json());

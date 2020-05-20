@@ -40,7 +40,13 @@ mongoose
 app.use(express.static('public'));
 app.use(cors());
 app.use(morgan("dev"));
-app.use(bodyParser.json());
+// added 2 bodyparser lines to fix PayloadTooLargeError
+app.use(bodyParser.urlencoded({
+  limit: "50mb",
+  extended: false
+}));
+app.use(bodyParser.json({limit: "50mb"}));
+// app.use(bodyParser.json());
 app.use(cookieParser());
 // cors
 if(process.env.NODE_ENV === "development") {
